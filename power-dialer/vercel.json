@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/leads/unlock",
+      "schedule": "*/2 * * * *"
+    }
+  ],
+  "functions": {
+    "src/app/api/leads/next/route.ts":               { "maxDuration": 15 },
+    "src/app/api/leads/dispose/route.ts":            { "maxDuration": 20 },
+    "src/app/api/gemini/battlecard/route.ts":        { "maxDuration": 15 },
+    "src/app/api/signalwire/status/route.ts":        { "maxDuration": 10 },
+    "src/app/api/concierge/recommend/route.ts":      { "maxDuration": 20 },
+    "src/app/api/competition/route.ts":              { "maxDuration": 15 }
+  }
+}
